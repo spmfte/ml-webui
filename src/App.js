@@ -21,7 +21,7 @@ function App() {
             <AppBar position="static" style={{ backgroundColor: 'black' }}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" style={{ color: 'white' }}>
-                       <img src="https://i.imgur.com/3CFeh4F.png" alt="ML-UI" style={{ width: 40, height: 40 }} /> ML-UI
+                       <img src="https://i.imgur.com/3CFeh4F.png" alt="YOLO WebUI" style={{ width: 40, height: 40 }} /> YOLO WebUI
                     </Typography>
                 </Toolbar>
             </AppBar>
