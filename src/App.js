@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ControlPanel from './components/ControlPanel';
+import VideoPlayer from './components/VideoPlayer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [streaming, setStreaming] = useState(false);
+    const videoSrc = `http://localhost:5000/process_video?input_source=webcam`; // Default to webcam for simplicity
+
+    const handleStartStream = () => {
+        setStreaming(true);
+    };
+
+    const handleStopStream = () => {
+        setStreaming(false);
+    };
+
+    return (
+        <div>
+            <h1>Video Streaming App</h1>
+            <ControlPanel onStartStream={handleStartStream} onStopStream={handleStopStream} />
+            <VideoPlayer streaming={streaming} videoSrc={videoSrc} />
+        </div>
+    );
 }
 
 export default App;
