@@ -21,16 +21,19 @@ function App() {
             <AppBar position="static" style={{ backgroundColor: 'black' }}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" style={{ color: 'white' }}>
-                        ML-UI
+                       <img src="https://i.imgur.com/3CFeh4F.png" alt="ML-UI" style={{ width: 40, height: 40 }} /> ML-UI
                     </Typography>
                 </Toolbar>
             </AppBar>
             <Container maxWidth="lg" style={{ marginTop: '20px' }}>
                 <ControlPanel onStartStream={handleStartStream} onStopStream={handleStopStream} />
-                <VideoPlayer streaming={streaming} videoSrc={videoSrc} />
+                <div style={{ marginTop: '20px' }}>
+                    <VideoPlayer streaming={streaming} videoSrc={videoSrc} />
+                </div>
             </Container>
         </div>
     );
 }
 
 export default App;
+

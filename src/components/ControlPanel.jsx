@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, TextField, MenuItem, Alert, Snackbar } from '@mui/material';
+import { Button, Container, TextField, MenuItem, Alert, Snackbar, Tooltip } from '@mui/material';
 import axios from 'axios';
 
 function ControlPanel({ onStartStream, onStopStream }) {
@@ -40,7 +40,7 @@ function ControlPanel({ onStartStream, onStopStream }) {
     };
 
     return (
-        <Container>
+        <Container maxWidth="sm">
             <TextField
                 select
                 label="Input Source"
@@ -61,20 +61,28 @@ function ControlPanel({ onStartStream, onStopStream }) {
                     margin="normal"
                 />
             )}
-            {!streaming ? (
-                <Button variant="contained" color="success" onClick={handleStart}>
-                    Start Stream
-                </Button>
-            ) : (
-                <Button variant="contained" color="error" onClick={handleStop}>
-                    Stop Stream
-                </Button>
-            )}
-            <Snackbar open={alertInfo.open} autoHideDuration={6000} onClose={handleCloseAlert}>
-                <Alert onClose={handleCloseAlert} severity={alertInfo.severity} sx={{ width: '100%' }}>
-                    {alertInfo.message}
-                </Alert>
-            </Snackbar>
+            <div>
+                <div align="center">
+                    {!streaming ? (
+                        <Tooltip title="Start the stream">
+                            <Button variant="contained" color="success" onClick={handleStart}>
+                                Start Stream
+                            </Button>
+                        </Tooltip>
+                    ) : (
+                        <Tooltip title="Stop the stream">
+                            <Button variant="contained" color="error" onClick={handleStop}>
+                                Stop Stream
+                            </Button>
+                        </Tooltip>
+                    )}
+                </div>
+                <Snackbar open={alertInfo.open} autoHideDuration={6000} onClose={handleCloseAlert}>
+                    <Alert onClose={handleCloseAlert} severity={alertInfo.severity} sx={{ width: '100%' }}>
+                        {alertInfo.message}
+                    </Alert>
+                </Snackbar>
+            </div>
         </Container>
     );
 }
