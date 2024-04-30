@@ -1,13 +1,140 @@
-body {
+/* Base reset and font smoothing for clean text rendering */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f4f4f4; /* Light gray background for a neutral look */
+  color: #333; /* Dark gray color for text for better readability */
+body {
+  font-size: 16px; /* Base font size for readability */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #2c3e50; /* Deep blue for headings to add depth and focus */
+}
+
+h1 {
+  font-size: 2.5rem; /* Large headers for emphasis */
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.6; /* Increased line-height for readability */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ecf0f1; /* Light gray background for code blocks */
+  color: #e74c3c; /* Red color for code to distinguish from regular text */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 90%;
+}
+
+/* Links */
+a {
+  color: #3498db; /* Bright blue for links for higher visibility */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for a traditional hyperlink effect */
+}
+
+/* Buttons */
+button {
+  background-color: #3498db; /* Consistent button color with link color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+background-color: #2980b9; /* Darken button on hover for feedback */
+}
+
+/* Form Elements */
+input, select, textarea {
+font-size: 1rem;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+width: 100%;
+}
+@media (max-width: 768px) {
+h1 {
+font-size: 2rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+h3 {
+font-size: 1.25rem;
+}
+button, input, select, textarea {
+padding: 8px;
+}
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+body {
+background: #2c3e50;
+color: #ecf0f1;
+}
+
+code {
+background-color: #34495e;
+color: #ecf0f1;
+}
+
+a {
+color: #48c9b0; /* Mint color for links in dark mode */
+}
+}
 }

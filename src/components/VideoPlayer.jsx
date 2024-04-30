@@ -6,7 +6,7 @@ function VideoPlayer({ streaming, videoSrc }) {
     return (
         <Card>
             <CardContent>
-                {streaming ? 
+                {streaming ?
                     <img src={videoSrc} alt="Video Stream" style={{ width: '100%' }} /> :
                     <p>Stream not active</p>
                 }
