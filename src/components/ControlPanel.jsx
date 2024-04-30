@@ -65,13 +65,13 @@ function ControlPanel({ onStartStream, onStopStream }) {
                 <div align="center">
                     {!streaming ? (
                         <Tooltip title="Start the stream">
-                            <Button variant="contained" color="success" onClick={handleStart}>
+                            <Button variant="contained" style={{ backgroundColor: 'black', color: 'white' }} onClick={handleStart}>
                                 Start Stream
                             </Button>
                         </Tooltip>
                     ) : (
                         <Tooltip title="Stop the stream">
-                            <Button variant="contained" color="error" onClick={handleStop}>
+                            <Button variant="outlined" style={{ borderColor: 'black', color: 'black' }} onClick={handleStop}>
                                 Stop Stream
                             </Button>
                         </Tooltip>

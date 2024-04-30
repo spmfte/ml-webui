@@ -65,6 +65,13 @@ main {
   padding: 20px;
   overflow-y: auto;
 }
+/* Footer Styling */
+footer {
+  background-color: rgba(18, 52, 86, 0.9);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
 /* Button styles with glass effect */
 button {
