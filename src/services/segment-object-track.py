@@ -21,6 +21,7 @@ model_active = False  # Control flag to activate or deactivate the model
 def test():
     return jsonify({"message": "CORS is configured correctly"})
 
+
 @app.route('/process_video', methods=['GET', 'POST'])
 def process_video():
     global model_active
