@@ -25,3 +25,4 @@ yarn-error.log*
 # Venv and models
 /yolo-webui-venv
 yolov8n-seg.pt
+src/services/yolov8n-seg.pt
