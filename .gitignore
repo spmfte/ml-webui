@@ -22,7 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Venv and models
-/yolo-webui-venv
+# Virtual environment and model files
+/yolo-webui-venv/
 yolov8n-seg.pt
 src/services/yolov8n-seg.pt
