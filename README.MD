@@ -1,5 +1,6 @@
 <h1 style="text-align: center; font-size: 32px; color: #5c67f2; font-family: 'Segoe UI', sans-serif; padding: 20px; background-color: #f0f4f8; border-bottom: 3px solid #fa8072;">YOLO WebUI</h1>
 
+![preview](/public/yolo-webui.png)
 <div style="text-align: center; margin-top: 20px; padding: 10px;">
   <img src="https://img.shields.io/badge/endpoint-up-brightgreen?style=for-the-badge&logo=appveyor" alt="Endpoint Status">
   <img src="https://img.shields.io/badge/YOLO-v8n--seg-blue?style=for-the-badge&logo=appveyor" alt="YOLO Model Version">
